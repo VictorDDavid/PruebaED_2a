@@ -13,7 +13,7 @@ class PersonaTest {
 
         Persona persona = new Persona();
 
-        // Assert
+
         assertNotNull(persona);
         assertEquals(1990, persona.getNacimiento().getYear());
         assertEquals(1, persona.getNacimiento().getMonthValue());
@@ -33,6 +33,20 @@ class PersonaTest {
                 persona2.getNacimiento());
 
     }
+
+    @Test
+    public void testEquals() {
+
+        Persona persona1 = new Persona(12345677, "Pepa", 'M', 10, 5, 1980);
+        Persona persona2 = new Persona(12345677, "Pepa", 'M', 10, 5, 1980);
+        Persona persona3 = new Persona(87654398, "Chantal", 'F', 15, 8, 1990);
+
+        //Assers true y false
+        assertTrue(persona1.equals(persona2));
+        assertFalse(persona1.equals(persona3));
+    }
+
+
 
 
 }
