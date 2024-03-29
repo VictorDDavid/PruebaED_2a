@@ -35,7 +35,8 @@ public class Curso {
         return s;
     }
 
-    public void aniadirAlumno(Persona p) {
+    public void aniadirAlumno(Persona p)
+    {
         listaAlumnos.add(p);
     }
 }
