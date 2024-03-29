@@ -46,6 +46,19 @@ class PersonaTest {
         assertFalse(persona1.equals(persona3));
     }
 
+    @Test
+    public void testCompareTo() {
+
+        Persona persona1 = new Persona(14345678, "Jordi", 'M', 10, 5, 1980);
+        Persona persona2 = new Persona(80654321, "Sol", 'F', 15, 8, 1990);
+        Persona persona3 = new Persona(80654321, "Sol", 'F', 15, 8, 1990);
+
+
+        assertTrue(persona1.compareTo(persona2) < 0);
+        assertTrue(persona2.compareTo(persona1) > 0);
+        assertEquals(0, persona2.compareTo(persona3));
+
+    }
 
 
 
