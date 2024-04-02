@@ -44,8 +44,8 @@ public class Curso {
     }
 
     /**
-     * Método para añadir alumnos al curso
-     * @param p Este parametro será el alumno a añadir
+     * Método para añadir alumnos al curso.
+     * @param p Este parametro será el alumno a añadir.
      *
      */
     public void aniadirAlumno(Persona p)
