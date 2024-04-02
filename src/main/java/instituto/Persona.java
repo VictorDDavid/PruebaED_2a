@@ -8,6 +8,11 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Objects;
 
+/**
+ * Clase para crear, calcular edad y comparar personas (Objetos)
+ * @author ProfDiurno
+ * @version 1.0
+ */
 public class Persona implements Comparable<Persona> {
 
     private Nif nif;
@@ -68,6 +73,10 @@ public class Persona implements Comparable<Persona> {
         this.nacimiento = nacimiento;
     }
 
+    /**
+     * Método para calcular la edad
+     * @return La edad de la persona
+     */
     public int getEdad() {
         return Period.between(nacimiento, LocalDate.now()).getYears();
     }
@@ -82,6 +91,11 @@ public class Persona implements Comparable<Persona> {
         }
     }
 
+    /**
+     * Metodo para indicar el un objeto es igual a otro.
+     * @param a El objeto a comparar.
+     * @return Si es el mismo objeto o no. -True o False-
+     */
     public boolean equals(Persona a) {
         if (a == null) {
             return false;
@@ -104,6 +118,7 @@ public class Persona implements Comparable<Persona> {
 
         return Objects.equals(this.nif, other.nif);
     }
+
 
     @Override
     public int compareTo(Persona o) {
