@@ -8,9 +8,9 @@ import java.util.TreeSet;
 
 /**
  * Clase para crear un curso. Añade y muestra  datos de alumnos.
+ *
  * @author ProfDiurno
  * @version 1.0
- *
  */
 public class Curso {
 
@@ -19,6 +19,7 @@ public class Curso {
 
     /**
      * Método que devuelve el nombre del curso.
+     *
      * @return El nombre del curso.
      */
     protected String getNombre() {
@@ -28,10 +29,13 @@ public class Curso {
     public Curso(String nombre) {
         this.nombre = nombre;
         listaAlumnos = new TreeSet<>();
+
+
     }
 
     /**
      * Método que devuelve datos.
+     *
      * @return Los datos del curso y alumnos matriculados.
      */
     @Override
@@ -47,11 +51,10 @@ public class Curso {
 
     /**
      * Método para añadir alumnos al curso.
-     * @param p Este parametro será el alumno a añadir.
      *
+     * @param p Este parametro será el alumno a añadir.
      */
-    public void aniadirAlumno(Persona p)
-    {
+    public void aniadirAlumno(Persona p) {
         listaAlumnos.add(p);
     }
 }

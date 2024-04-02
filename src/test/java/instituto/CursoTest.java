@@ -9,13 +9,14 @@ class CursoTest {
 
     Curso c;
     Persona p;
-    Persona p1;
-   TreeSet<Persona> listaAlumnos;
+    Persona p1, p2;
+
     @BeforeEach
     void setUp() {
         c = new Curso("DAM1");
         p = new Persona(12345678,"Godard",'H',1,6,1980);
         p1 = new Persona(12345677);
+        p2 = new Persona(18345678,"Varda",'M',1,8,1967);
 
 
 
@@ -29,11 +30,13 @@ class CursoTest {
     @Test
     void aniadirAlumno() {
      //añadir alumnos al curso
-        c.aniadirAlumno(p);
+        c.aniadirAlumno(p2);
+        String alumno = c.toString();
 
-        listaAlumnos = new TreeSet<>();
+        assertTrue(alumno.contains("Varda"));
 
-        assertEquals(1,listaAlumnos.size());
+
+
 
     }
 
