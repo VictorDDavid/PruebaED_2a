@@ -9,6 +9,8 @@ import java.util.TreeSet;
 /**
  * Clase para crear un curso. Añade y muestra  datos de alumnos.
  * @author ProfDiurno
+ * @version 1.0
+ *
  */
 public class Curso {
 
