@@ -7,7 +7,7 @@ package instituto;
 import java.util.TreeSet;
 
 /**
- *
+ * Clase para crear un curso. Añade y muestra  datos de alumnos.
  * @author ProfDiurno
  */
 public class Curso {
@@ -15,6 +15,10 @@ public class Curso {
     private String nombre;
     private TreeSet<Persona> listaAlumnos;
 
+    /**
+     * Método que devuelve el nombre del curso.
+     * @return El nombre del curso.
+     */
     protected String getNombre() {
         return nombre;
     }
@@ -24,6 +28,10 @@ public class Curso {
         listaAlumnos = new TreeSet<>();
     }
 
+    /**
+     * Método que devuelve datos.
+     * @return Los datos del curso y alumnos matriculados.
+     */
     @Override
     public String toString() {
         String s = "--------------------" + nombre + "-----------------\n";
@@ -35,6 +43,11 @@ public class Curso {
         return s;
     }
 
+    /**
+     * Método para añadir alumnos al curso
+     * @param p Este parametro será el alumno a añadir
+     *
+     */
     public void aniadirAlumno(Persona p)
     {
         listaAlumnos.add(p);
